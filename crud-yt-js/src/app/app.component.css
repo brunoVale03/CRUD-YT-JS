@@ -1,0 +1,140 @@
+/* src/app/app.component.css */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Estilo para o botão "Adicionar Vídeo" */
+button.add-video {
+  background-color: #4CAF50; /* Verde para adicionar vídeo */
+}
+
+button.add-video:hover {
+  background-color: #45a049; /* Escurecer ao passar o mouse */
+}
+
+/* Estilo para o botão "Reproduzir" */
+button.play-button {
+  background-color: green; /* Verde para reproduzir */
+}
+
+button.play-button:hover {
+  background-color: darkgreen; /* Escurecer ao passar o mouse */
+}
+
+/* Estilo para o botão "Ocultar Vídeo" */
+button.hide-button {
+  background-color: red; /* Vermelho para ocultar */
+}
+
+button.hide-button:hover {
+  background-color: darkred; /* Escurecer ao passar o mouse */
+}
+
+.videos-container {
+  text-align: left;
+}
+
+.video-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.video-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.video-list li a {
+  text-decoration: none;
+  color: #2196F3;
+}
+
+.video-list li a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: #888;
+}
+
+.video-player {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.error-box {
+  color: #f44336; /* Vermelho */
+  background-color: #ffebee; /* Fundo claro */
+  border: 1px solid #f44336; /* Borda vermelha */
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  font-size: 14px; /* Tamanho da fonte */
+  text-align: left; /* Alinhamento à esquerda */
+  white-space: pre-wrap; /* Para manter quebras de linha */
+}
+
+/* src/app/app.component.css */
+
+/* Estilo para o botão de adicionar */
+.add-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.add-button:hover {
+  background-color: darkgreen; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Estilo para o botão de excluir */
+.delete-button {
+  background-color: red; /* Vermelho */
+}
+
+.delete-button:hover {
+  background-color: red; /* Vermelho mais escuro ao passar o mouse */
+}
+
+.error-box {
+  background-color: red; /* Vermelho mais escuro ao passar o mouse */
+
+}

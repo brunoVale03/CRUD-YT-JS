@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Gerenciador de Vídeos do YouTube</h1>
+
+  <div class="input-container">
+    <input [(ngModel)]="youtubeUrl" placeholder="Insira a URL do YouTube" />
+    <button (click)="playVideo()" class="add-button">Adicionar Vídeo</button>
+  </div>
+
+  <!-- Área para a mensagem de erro formatada como uma caixa de texto -->
+  <div *ngIf="errorMessage" class="error-box">{{ errorMessage }}</div>
+
+  <div *ngIf="savedVideos.length > 0" class="videos-container">
+    <h3>Vídeos Salvos:</h3>
+    <p>Para excluir um vídeo, clique no link correspondente ou em reproduzir na mesma página:</p>
+    <ul class="video-list">
+      <li *ngFor="let video of savedVideos; let i = index">
+        <a href="{{ video }}" target="_blank">{{ video }}</a>
+        <button (click)="playSelectedVideo(video)" class="play-button">Reproduzir</button>
+        <button (click)="deleteVideo(i)" class="delete-button">Excluir</button>
+      </li>
+    </ul>
+    <div *ngIf="selectedVideo" class="video-player">
+      <iframe
+        [src]="sanitizer.bypassSecurityTrustResourceUrl(getEmbedUrl(selectedVideo))"
+        width="560"
+        height="315"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <button (click)="selectedVideo = null" class="hide-button">Ocultar Vídeo</button>
+    </div>
+  </div>
+
+  <div *ngIf="savedVideos.length === 0">
+    <p>Nenhum vídeo salvo ainda.</p>
+  </div>
+</div>
